@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="OBMC Logo (Compact).png">
+
+    <style>
+        body {
+            font-family: 'Poppins';
+            background-image: url('https://meadhunt.com/wp-content/uploads/future-of-transpo-1200x675-1.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            backdrop-filter: blur(5px);
+            min-height: 100vh;
+            padding-bottom: 40px;
+            font-family: 'Poppins';
+        }
+
+        .nav-link:hover {
+            color: #ffd37a !important;
+            transition: 0.3s;
+        }
+        button {
+            width: 250px;
+        }
+
+        .overlay-box,
+        .enroll-form {
+            background: rgba(40, 40, 40, 0.78);
+            border-radius: 15px;
+            padding: 45px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+            color: white;
+        }
+      
+        .overlay-box,
+        .enroll-form {
+            background: rgba(40, 40, 40, 0.78);
+            border-radius: 15px;
+            padding: 45px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+            color: white;
+        }
+
+        .nav-link:hover {
+            color: #ffc107 !important;
+            transition: .3s;
+        }
+
+
+        button[type="submit"] {
+            width: 40%;
+            height: 50px;
+            border-radius: 8px;
+            padding: 7px;
+            margin: 0 auto;
+            background: white;
+            color: black;
+            display: block;
+        }
+
+        li img {
+          width: 40px;
+          margin-right: 15px;
+        }
+        #PFP {
+            border-radius: 50%;
+            width: 230px;
+            height: 230px;
+            object-fit: cover;
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+  <div class="container-fluid">
+    <div class="navbar-collapse">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Fare Matrix</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Schedule</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Help</a></li>
+      </ul>
+
+      <form class="d-flex">
+        <button class="btn btn-light text-dark" type="button">Create Account</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<div class="container mt-5">
+    <div class="overlay-box mb-4">
+        <h1 class="fw-bold mb-3">Registration</h1>
+
+        <details class="ontoggle">
+            <summary><em>Instructions:</em></summary>
+            <p id="instructions"></p>
+        </details>
+
+    </div>
+    
+
+    <!-- FORM -->
+    <form class="enroll-form">
+
+        <h1 class="fw-bold mb-4">User Form</h1>
+
+        <div class="formwrapper">
+
+            <!-- STUDENT INFO -->
+            <h4 class="fw-light mb-3">Information</h4>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label>First Name</label><span class="description required"> <small>(required)</small></span>
+                    <input type="text" class="form-control" placeholder="First Name" required>
+                </div>
+                
+                <div class="col-md-6 mb-3">
+                    <label>Last Name</label><span class="description required"> <small>(required)</small></span>
+                    <input type="text" class="form-control" placeholder="Last Name" required>
+                </div>
+            </div>
+
+            <div class="row mb-5">
+                <div class="col-md-2 mb-3">
+                    <label>Age</label><span class="description required"> <small>(required)</small></span>
+                    <div class="input-group">
+                        <input type="number" class="form-control" required>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label>Email</label><span class="description required"> <small>(required)</small></span>
+                    <input type="email" class="form-control" placeholder="zara@obmontessori.edu.ph" required>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <label>Contact Number</label><span class="description required"> <small>(required)</small></span>
+                    <input type="tel" class="form-control" placeholder="0000-000-0000" required>
+                 </div>
+
+                <div class="col-md-6 mb-3">
+                    <label>Username</label><span class="description required"> <small>(required)</small></span>
+                    <input type="text" class="form-control" placeholder="ItsMeZara" required>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label>Password</label><span class="description required"> <small>(required)</small></span>
+                    <input type="password" class="form-control" required>
+                </div>
+            </div>
+
+            <img src="https://i.pinimg.com/736x/46/82/7d/46827ddfea1035901b006b655b08955a.jpg" alt="" id="PFP">
+            <div class="pfp row mb-5 ">
+                    <div class="col-md-6 mb-3 mx-auto d-block">
+                    <label>Profile Picture</label><span class="description required"> <small>(required)</small></span>
+                    <input type="file" class="form-control" required>
+                </div>
+            </div>
+
+        <button type="submit" class="mt-4">Submit Form</button>
+    </form>
+</div>
+
+
+<script>
+     document.getElementById("instructions").innerHTML =
+     'Please fill out all required fields in the registration form with accurate information. Once completed, review your details and click Submit to finish your registration.'
+</script>
+</body>
+</html>
