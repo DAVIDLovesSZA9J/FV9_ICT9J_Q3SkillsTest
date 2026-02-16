@@ -1,3 +1,8 @@
+<!-- Credits/Sources
+CSS Shadow Generator: https://html-css-js.com/css/generator/box-shadow/
+Poppins Font: https://fonts.google.com/specimen/Poppins?query=poppins 
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,10 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="OBMC Logo (Compact).png">
+    <link rel="icon" type="image/png" href="C.png">
 
     <style>
         body {
@@ -19,40 +22,25 @@
             backdrop-filter: blur(5px);
             min-height: 100vh;
             padding-bottom: 40px;
-            font-family: 'Poppins';
         }
 
         .nav-link:hover {
-            color: #ffd37a !important;
+            color: #ffffff !important;
             transition: 0.3s;
         }
+
         button {
             width: 250px;
         }
 
         .overlay-box,
-        .enroll-form {
+        .user-form {
             background: rgba(40, 40, 40, 0.78);
             border-radius: 15px;
             padding: 45px;
             box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
             color: white;
         }
-      
-        .overlay-box,
-        .enroll-form {
-            background: rgba(40, 40, 40, 0.78);
-            border-radius: 15px;
-            padding: 45px;
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
-            color: white;
-        }
-
-        .nav-link:hover {
-            color: #ffc107 !important;
-            transition: .3s;
-        }
-
 
         button[type="submit"] {
             width: 40%;
@@ -66,118 +54,150 @@
         }
 
         li img {
-          width: 40px;
-          margin-right: 15px;
+            width: 40px;
+            margin-right: 15px;
         }
-        #PFP {
+
+        #pfp {
             border-radius: 50%;
             width: 230px;
             height: 230px;
             object-fit: cover;
             display: block;
             margin: auto;
+            box-shadow: -2px -1px 13px 0px rgba(0, 0, 0, 0.605);
+        }
+
+        .confirm {
+            height: 40px;
+            display: block;
+            margin: auto;
+            border-radius: 10px;
+        }
+
+        #refreshbtn {
+            width: 100px;
+            margin-top: 10px;
+            margin-left: 10px;
         }
     </style>
 </head>
 
 <body>
+    <!-- Navbar
+    Source: 2Q Project -->
     
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
-  <div class="container-fluid">
-    <div class="navbar-collapse">
-      <ul class="navbar-nav me-auto">
-        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Fare Matrix</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Schedule</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Help</a></li>
-      </ul>
-
-      <form class="d-flex">
-        <button class="btn btn-light text-dark" type="button">Create Account</button>
-      </form>
-    </div>
-  </div>
-</nav>
-
-<div class="container mt-5">
-    <div class="overlay-box mb-4">
-        <h1 class="fw-bold mb-3">Registration</h1>
-
-        <details class="ontoggle">
-            <summary><em>Instructions:</em></summary>
-            <p id="instructions"></p>
-        </details>
-
-    </div>
-    
-
-    <!-- FORM -->
-    <form class="enroll-form">
-
-        <h1 class="fw-bold mb-4">User Form</h1>
-
-        <div class="formwrapper">
-
-            <!-- STUDENT INFO -->
-            <h4 class="fw-light mb-3">Information</h4>
-
-            <div class="row">
-                <div class="col-md-6 mb-3">
-                    <label>First Name</label><span class="description required"> <small>(required)</small></span>
-                    <input type="text" class="form-control" placeholder="First Name" required>
-                </div>
-                
-                <div class="col-md-6 mb-3">
-                    <label>Last Name</label><span class="description required"> <small>(required)</small></span>
-                    <input type="text" class="form-control" placeholder="Last Name" required>
-                </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+        <div class="container-fluid">
+            <div class="navbar-collapse">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Fare Matrix</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Schedule</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Help</a></li>
+                </ul>
+                <form class="d-flex">
+                    <button class="btn btn-light text-dark" type="button">Create Account</button>
+                </form>
             </div>
+        </div>
+    </nav>
 
-            <div class="row mb-5">
-                <div class="col-md-2 mb-3">
-                    <label>Age</label><span class="description required"> <small>(required)</small></span>
-                    <div class="input-group">
-                        <input type="number" class="form-control" required>
+    <!-- Refresh Button 
+    Source: Sir Renn, SW2 -->
+    <button type="button" class="btn btn-light refresh" onclick="window.location.reload()" id="refreshbtn">Refresh</button> 
+
+    <div class="container mt-5">
+        <div class="overlay-box mb-4">
+            <h1 class="fw-bold mb-3">Registration</h1>
+            <details class="ontoggle">
+                <summary><em>Instructions:</em></summary>
+                <p id="instructions"></p>
+            </details>
+        </div>
+
+        <!-- User Form 
+        Source: 2Q Project (Enrollment Form) -->
+        <form class="user-form">
+            <h1 class="fw-bold mb-4">User Form</h1>
+            <div class="formwrapper">
+                <h4 class="fw-light mb-3">Information</h4>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label>First Name</label><span class="description required"> <small>(required)</small></span>
+                        <input type="text" class="form-control" placeholder="First Name" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label>Last Name</label><span class="description required"> <small>(required)</small></span>
+                        <input type="text" class="form-control" placeholder="Last Name" required>
                     </div>
                 </div>
 
-                <div class="col-md-6 mb-3">
-                    <label>Email</label><span class="description required"> <small>(required)</small></span>
-                    <input type="email" class="form-control" placeholder="zara@obmontessori.edu.ph" required>
+                <div class="row mb-5">
+                    <div class="col-md-2 mb-3">
+                        <label>Age</label><span class="description required"> <small>(required)</small></span>
+                        <div class="input-group">
+                            <input type="number" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label>Email</label><span class="description required"> <small>(required)</small></span>
+                        <input type="email" class="form-control" placeholder="zara@obmontessori.edu.ph" required>
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <label>Contact Number</label><span class="description required"> <small>(required)</small></span>
+                        <input type="tel" class="form-control" placeholder="0000-000-0000" required>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label>Username</label><span class="description required"> <small>(required)</small></span>
+                        <input type="text" class="form-control" placeholder="ItsMeZara" required>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label>Password</label><span class="description required"> <small>(required)</small></span>
+                        <input type="password" class="form-control" required>
+                    </div>
                 </div>
 
-                <div class="col-md-4 mb-3">
-                    <label>Contact Number</label><span class="description required"> <small>(required)</small></span>
-                    <input type="tel" class="form-control" placeholder="0000-000-0000" required>
-                 </div>
-
-                <div class="col-md-6 mb-3">
-                    <label>Username</label><span class="description required"> <small>(required)</small></span>
-                    <input type="text" class="form-control" placeholder="ItsMeZara" required>
+                <div id="pfp-container">
+                    <img src="https://i.pinimg.com/736x/46/82/7d/46827ddfea1035901b006b655b08955a.jpg" alt="" id="pfp">
                 </div>
 
-                <div class="col-md-6 mb-3">
-                    <label>Password</label><span class="description required"> <small>(required)</small></span>
-                    <input type="password" class="form-control" required>
-                </div>
-            </div>
-
-            <img src="https://i.pinimg.com/736x/46/82/7d/46827ddfea1035901b006b655b08955a.jpg" alt="" id="PFP">
-            <div class="pfp row mb-5 ">
+                <div class="pfp row mb-5">
                     <div class="col-md-6 mb-3 mx-auto d-block">
-                    <label>Profile Picture</label><span class="description required"> <small>(required)</small></span>
-                    <input type="file" class="form-control" required>
+                        <label>Profile Picture</label><span class="description required"> <small>(required)</small></span>
+                        <input type="file" class="form-control mb-2" required>
+                        <button type="button" onclick="changeImage()" class="confirm btn-display">Confirm Image</button>
+                    </div>
                 </div>
+
+                <button type="submit" class="mt-4">Create Account</button>
             </div>
+        </form>
+    </div>
 
-        <button type="submit" class="mt-4">Submit Form</button>
-    </form>
-</div>
+    <script>
+        // Assigning Variables
+        var pfpContainer = document.getElementById("pfp-container"); // PFP container
+        var instructions = document.getElementById("instructions"); // Instructions container
 
+        var defaultPfp = "https://i.pinimg.com/736x/46/82/7d/46827ddfea1035901b006b655b08955a.jpg"; // Old profile pic
+        var newPfp = "https://i.pinimg.com/736x/07/31/a4/0731a4b832f46ae6e078dd9cfed922c1.jpg"; // New profile pic
 
-<script>
-     document.getElementById("instructions").innerHTML =
-     'Please fill out all required fields in the registration form with accurate information. Once completed, review your details and click Submit to finish your registration.'
-</script>
+        var instructionsText = "Please fill out all required fields in the registration form with accurate information. Once completed, review your details and click Submit to finish your registration.";
+
+        // Setup
+        window.alert("To start registering your account, click 'OK'");
+        instructions.innerHTML = instructionsText;
+
+        // Function
+        function changeImage() {
+            pfpContainer.innerHTML = '<img src="' + newPfp + '" width="200" id="pfp">'; // Changes from old PFP to new PFP by using innerHTML and concatenation
+            window.alert("Your profile picture has been changed!"); // Alerts the user once the profile picture has been updated
+        }
+    </script>
 </body>
 </html>
